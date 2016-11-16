@@ -23,8 +23,7 @@
 #include <linux/vmalloc.h>
 
 MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("BlinkDRV");
-MODULE_AUTHOR("Marta Rodenas de Miguel & Cristian Pinto Lozano");
+/*Marta Rodenas de Miguel & Cristian Pinto Lozano*/
 
 /* Get a minor range for your devices from the usb maintainer */
 #define USB_BLINK_MINOR_BASE	0 
