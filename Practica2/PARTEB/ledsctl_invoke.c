@@ -11,8 +11,7 @@
 #define __NR_LED 316
 #endif
 
-MODULE_DESCRIPTION("LedSctl");
-MODULE_AUTHOR("Marta Rodenas de Miguel & Cristian Pinto Lozano");
+/*Marta Rodenas de Miguel & Cristian Pinto Lozano*/
 
 long ledctl(int num);
 
