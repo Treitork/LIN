@@ -7,8 +7,7 @@
 #include <asm-generic/errno-base.h>
 #include <linux/errno.h>
 
-MODULE_DESCRIPTION("LedSysCall");
-MODULE_AUTHOR("Marta Rodenas de Miguel & Cristian Pinto Lozano");
+/*Marta Rodenas de Miguel & Cristian Pinto Lozano*/
 
 struct tty_driver* kbd_driver= NULL;  /* Driver of leds */
 
