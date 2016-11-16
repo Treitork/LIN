@@ -11,8 +11,6 @@
 #define __NR_LED 316
 #endif
 
-/*Marta Rodenas de Miguel & Cristian Pinto Lozano*/
-
 long ledctl(int num);
 
 int main(int argc, char **argv) {
