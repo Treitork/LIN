@@ -60,10 +60,10 @@ int get_opt(const char *sec){
 		}
 		return 0;
 	}
-	else if(strcmp(sec,"impares")==0){
+	else if(strcmp(sec,"tres")==0){
 		int val = 0;
 		for(val; val < 5; val++){
-			if(col_impares() != 0)
+			if(col_tres() != 0)
 				return -1;
 			usleep(1000000);
 		}
@@ -136,7 +136,7 @@ int col_pares(){
 	return 0;
 }
 
-int col_impares(){
+int col_tres(){
 	unsigned char str[LEDS][LEDS] = {};
 	const char *hex_digits = "0123456789ABCDEF";
 	int i, j;
@@ -152,10 +152,9 @@ int col_impares(){
 		str[j][2] = '0';
 		str[j][3] = 'x';
 		for( i = 4 ; i < LEDS + 2; i++ ) {
-			str[1][i] = hex_digits[ ( rand() % 16 ) ];
-			str[3][i] = hex_digits[ ( rand() % 16 ) ];
-			str[5][i] = hex_digits[ ( rand() % 16 ) ];
-			str[7][i] = hex_digits[ ( rand() % 16 ) ];
+			str[(i+1)%8][i] = hex_digits[ ( rand() % 16 ) ];
+			str[(i+4)%8][i] = hex_digits[ ( rand() % 16 ) ];
+			str[(i+7)%8][i] = hex_digits[ ( rand() % 16 ) ];
 		}
 		strcat(string, str[j]);
 		if(j != LEDS - 1)
