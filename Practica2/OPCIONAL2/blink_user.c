@@ -7,6 +7,9 @@
 #define LEDS 8
 #define SIZE 87
 
+MODULE_DESCRIPTION("BlinkUser");
+MODULE_AUTHOR("Marta Rodenas de Miguel & Cristian Pinto Lozano");
+
 const char *file = "/dev/usb/blinkstick0";
 
 void show_error();
