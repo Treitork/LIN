@@ -46,7 +46,7 @@ int fifoproc_read(const char* buff, int len) {
 		cond_wait(cons,mtx);
 	}
 	/* Detectar fin de comunicación por error (consumidor cierra FIFO antes) */
-	if (cons_count==0 && is_empty_cbuffer_t(cbuffer)) {unlock(mtx); return 0;}
+	if (cons_count==0 && is_empty_cbuffer_t(cbuffer)) {unlock(mtx); return -EPIPE;}
 	remove_items_cbuffer_t(cbuffer,kbuffer,len);
 	/* Despertar a posible consumidor bloqueado */
 	cond_signal(prod);
